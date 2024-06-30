@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Oetterer"
+		]
+	},
+	"authremoteuser": "RemoteAuth",
+	"authremoteuser-summary": "This page manages authentication via webserver's <code>REMOTE_AUTH</code>.",
+	"auth-remote-user-login-button-label": "RemoteAuth Login",
+	"auth-remote-user-desc": "Allows authentication via webserver's <code>REMOTE_AUTH</code>."
+}

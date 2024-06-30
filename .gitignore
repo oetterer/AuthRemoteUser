@@ -1,0 +1,13 @@
+*~
+*.kate-swp
+*.swp
+
+vendor/
+extensions/
+
+composer.phar
+composer.lock
+
+!.*
+.idea/
+.phpunit.result.cache

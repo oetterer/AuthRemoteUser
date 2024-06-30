@@ -1,0 +1,33 @@
+{
+	"name": "mediawiki/auth-remote-user",
+	"type": "mediawiki-extension",
+	"description": "A Mediawiki extension to allow for authentication via webserver's REMOTE_AUTH (i.e. with kerberos) functionality.",
+	"keywords": [
+		"wiki",
+		"mediawiki",
+		"extension",
+		"kerberos",
+		"remote",
+		"authentication"
+	],
+	"homepage": "https://www.mediawiki.org/wiki/Extension:AuthRemoteUser",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Tobias Oetterer",
+			"role": "Creator"
+		}
+	],
+	"support": {
+		"wiki": "https://www.mediawiki.org/wiki/Extension:AuthRemoteUser",
+		"issues": "https://github.com/oetterer/AuthRemoteUser/issues",
+		"forum": "https://www.mediawiki.org/wiki/Extension_talk:AuthRemoteUser",
+		"source": "https://github.com/oetterer/AuthRemoteUser"
+	},
+	"extra": {
+		"installer-name": "AuthRemoteUser"
+	},
+	"require": {
+		"composer/installers": "~1.0|~2"
+	}
+}

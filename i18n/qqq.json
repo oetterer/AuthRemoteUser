@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Oetterer"
+		]
+	},
+	"@note": "This extension purposely does not utilize an alias for its special page, to that location matching is easier to configure.",
+	"authremoteuser": "Name of the special page for remote authentication (whiz not listed on special pages overview anyways)",
+	"authremoteuser-summary": "Summary description of special page's purpose.",
+	"auth-remote-user-login-button-label": "Label for the login button, initiating remote user authentication",
+	"auth-remote-user-desc": "{{desc|name=AuthRemoteUser|url=https://www.mediawiki.org/wiki/Extension:AuthRemoteUser}}"
+}
