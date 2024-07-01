@@ -13,17 +13,25 @@ use RequestContext;
 use SpecialPage;
 use Title;
 
+/**
+ * Class PluggableAuth
+ *
+ * This class provides a pluggable authentication mechanism for MediaWiki, relying on webserver authentication.
+ *
+ *
+ * @package MediaWiki\Auth
+ */
 class PluggableAuth extends PA_Base {
 
 	/**
 	 * @var AuthManager
 	 */
-	private $authManager;
+	private AuthManager $authManager;
 
 	/**
 	 * @var UserFactory
 	 */
-	private $userFactory;
+	private UserFactory $userFactory;
 
 
 	/**
@@ -56,7 +64,7 @@ class PluggableAuth extends PA_Base {
 		$this->getLogger()->debug( 'Configured valid domain is: ' . $validDomain );
 
 		if ( $principal !== null ) {
-        	list( $providedUsername, $providedDomain ) = $this->processPrincipal( $principal );
+        	[ $providedUsername, $providedDomain ] = $this->processPrincipal( $principal );
 			$this->getLogger()->debug( 'Working with username "' . $providedUsername . '" and domain "' . $providedDomain . '"' );
 
 			if ( $validDomain && ($validDomain != $providedDomain) ) {
@@ -93,7 +101,7 @@ class PluggableAuth extends PA_Base {
 	 *
 	 * @return array An array containing the username and domain extracted from the principal.
 	 */
-	protected function processPrincipal( string $principal ) {
+	protected function processPrincipal( string $principal ): array {
 		$myConfig = MediaWikiServices::getInstance()->getMainConfig();
 
 		$parts = explode( '@', $principal );
@@ -123,7 +131,7 @@ class PluggableAuth extends PA_Base {
 	protected function redirectToSpecialPage( Title $currentTitle, Title $destinationTitle ): void {
 		$url = $destinationTitle->getFullURL( [
 			'returnto' => $currentTitle,
-			'returntoquery' => $this->authManager->getRequest()->getRawPostString(),	// see PluggableAuthLogin line 149 for a different idea
+			'returntoquery' => $this->authManager->getRequest()->getRawPostString(),
 		] );
 		if ( $url ) {
 			$this->getLogger()->debug( 'Redirecting to ' . $url );

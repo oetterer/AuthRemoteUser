@@ -10,10 +10,17 @@ use MediaWiki\Extension\PluggableAuth\PluggableAuthLogin;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\User\UserIdentityValue;
+use Message;
 use Psr\Log\LoggerInterface;
 use UnlistedSpecialPage;
 use Wikimedia\Timestamp\ConvertibleTimestamp;
 
+/**
+ * This is a verbatim copy of \MediaWiki\Extension\PluggableAuth\PluggableAuthLogin
+ * except for its name and logger id.
+ *
+ * It evokes AuthRemoteUser's authenticate() function.
+ */
 class SpecialAuthRemoteUser extends UnlistedSpecialPage {
 
 	/**
